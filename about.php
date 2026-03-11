@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<?php
+session_start();
+
+$isLoggedIn = isset($_SESSION['user_id']);
+$isAdmin = isset($_SESSION['role']) && $_SESSION['role'] === 'admin';
+?>
+>>>>>>> c74e38f (ferjaoui_amine)
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -42,7 +51,11 @@
   <body>
     <!-- Navbar -->
     <nav>
+<<<<<<< HEAD
       <a href="index.html" class="brand">
+=======
+      <a href="index.php" class="brand">
+>>>>>>> c74e38f (ferjaoui_amine)
         <h1>LALA<b class="accent">PA</b></h1>
       </a>
       <div class="menu">
@@ -52,6 +65,7 @@
         <a href="index.php">Home</a>
         <a href="about.php">About</a>
         <a href="ourteam.php">Our Team</a>
+<<<<<<< HEAD
         <a href="about.html">About</a>
         <a href="service.php">Service</a>
       </div>
@@ -60,11 +74,39 @@
         <p>Contact Us</p>
         <i class="fa-solid fa-circle-arrow-right"></i>
       </button>
+=======
+        <a href="service.php">Service</a>
+        <a href="pets.php">Pets</a>
+        <a href="annonces.php">Annonces</a>
+        <a href="contact.php">Contact</a>
+        <?php if($isAdmin): ?>
+          <a href="admin/index.php">Admin</a>
+        <?php endif; ?>
+        <?php if($isLoggedIn): ?>
+          <a href="user/index.php">Mon espace</a>
+        <?php endif; ?>
+      </div>
+
+      <?php if(!$isLoggedIn): ?>
+        <button class="btn-2" onclick="window.location.href='register.php'">
+          <p>Register</p>
+          <i class="fa-solid fa-circle-arrow-right"></i>
+        </button>
+        <button class="btn-3" onclick="window.location.href='Login.php'">
+          <p>login</p>
+        </button>
+      <?php else: ?>
+        <button class="btn-3" onclick="window.location.href='logout.php'">
+          <p>Logout</p>
+        </button>
+      <?php endif; ?>
+>>>>>>> c74e38f (ferjaoui_amine)
 
       <div class="btn">
         <i class="fas fa-bars menu-btn"></i>
       </div>
     </nav>
+<<<<<<< HEAD
     <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -195,6 +237,106 @@ We are highly passionate about Web and Mobile application Development Services.
 <div class="stat-container">
 
 <div class="stat">
+=======
+    <!-- About Section -->
+    <section style="padding: 80px 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <h1 style="font-size: 48px; margin-bottom: 20px;">À Propos de LALAPA</h1>
+        <p style="font-size: 20px; line-height: 1.6;">
+          Nous sommes une organisation dédiée à la protection et à l'adoption d'animaux abandonnés. 
+          Notre mission est de donner une seconde chance à chaque animal en leur trouvant un foyer aimant.
+        </p>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section style="padding: 60px 30px; max-width: 1200px; margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: center;">
+        <div>
+          <h2 style="font-size: 36px; color: #2d3748; margin-bottom: 20px;">Notre Mission</h2>
+          <p style="font-size: 18px; line-height: 1.8; color: #4a5568;">
+            Depuis notre création, nous avons sauvé et placé des centaines d'animaux dans des foyers aimants. 
+            Nous travaillons avec des associations locales pour offrir les meilleurs soins à nos protégés.
+          </p>
+          <ul style="margin-top: 20px; font-size: 16px; color: #4a5568; line-height: 2;">
+            <li><i class="fas fa-check" style="color: #667eea;"></i> Sauvetage d'animaux abandonnés</li>
+            <li><i class="fas fa-check" style="color: #667eea;"></i> Soins vétérinaires complets</li>
+            <li><i class="fas fa-check" style="color: #667eea;"></i> Placement responsable</li>
+            <li><i class="fas fa-check" style="color: #667eea;"></i> Suivi post-adoption</li>
+          </ul>
+        </div>
+        <div>
+          <img src="images/dog1.jpg" alt="Mission" style="width: 100%; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section style="padding: 60px 30px; background: #f5f7fa;">
+      <div style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="font-size: 36px; color: #2d3748; text-align: center; margin-bottom: 50px;">Nos Valeurs</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+          <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-align: center;">
+            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+              <i class="fas fa-heart" style="font-size: 28px; color: white;"></i>
+            </div>
+            <h3 style="font-size: 22px; color: #2d3748; margin-bottom: 15px;">Compassion</h3>
+            <p style="color: #718096; line-height: 1.6;">Chaque animal mérite amour et respect</p>
+          </div>
+          <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-align: center;">
+            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+              <i class="fas fa-shield-alt" style="font-size: 28px; color: white;"></i>
+            </div>
+            <h3 style="font-size: 22px; color: #2d3748; margin-bottom: 15px;">Protection</h3>
+            <p style="color: #718096; line-height: 1.6;">Sauver et protéger les animaux vulnérables</p>
+          </div>
+          <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-align: center;">
+            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+              <i class="fas fa-users" style="font-size: 28px; color: white;"></i>
+            </div>
+            <h3 style="font-size: 22px; color: #2d3748; margin-bottom: 15px;">Communauté</h3>
+            <p style="color: #718096; line-height: 1.6;">Ensemble pour un monde meilleur</p>
+          </div>
+          <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-align: center;">
+            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+              <i class="fas fa-handshake" style="font-size: 28px; color: white;"></i>
+            </div>
+            <h3 style="font-size: 22px; color: #2d3748; margin-bottom: 15px;">Transparence</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATISTICS -->
+    <section class="stats">
+
+      <h2>We Provide with</h2>
+
+      <div class="stat-container">
+
+        <div class="stat">
+          <h3>150+</h3>
+          <p>Professionals Team</p>
+        </div>
+
+        <div class="stat">
+          <h3>10+</h3>
+          <p>Years of Experience</p>
+        </div>
+
+        <div class="stat">
+          <h3>120K</h3>
+          <p>Projects Delivered</p>
+        </div>
+
+        <div class="stat">
+          <h3>50K</h3>
+          <p>Happy Client</p>
+        </div>
+
+      </div>
+
+    </section>
+>>>>>>> c74e38f (ferjaoui_amine)
 <h3>150+</h3>
 <p>Professionals Team</p>
 </div>

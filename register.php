@@ -9,10 +9,17 @@ $nom=$_POST['nom'];
 $email=$_POST['email'];
 $password=password_hash($_POST['password'],PASSWORD_DEFAULT);
 
+<<<<<<< HEAD
 $sql="INSERT INTO utilisateurs(nom,email,password)
 VALUES('$nom','$email','$password')";
 
 if(mysqli_query($conn,$sql)){
+=======
+$stmt = mysqli_prepare($conn, "INSERT INTO utilisateurs(nom,email,password) VALUES(?,?,?)");
+mysqli_stmt_bind_param($stmt, "sss", $nom, $email, $password);
+
+if(mysqli_stmt_execute($stmt)){
+>>>>>>> c74e38f (ferjaoui_amine)
 $message="Account Created!";
 }
 }
@@ -36,7 +43,11 @@ $message="Account Created!";
 <img src="img/hero-img-2.png">
 
 <div class="buttons">
+<<<<<<< HEAD
 <a href="login.php" class="btn-outline">LOG IN</a>
+=======
+<a href="Login.php" class="btn-outline">LOG IN</a>
+>>>>>>> c74e38f (ferjaoui_amine)
 <a href="register.php" class="btn-white">SIGN UP</a>
 </div>
 

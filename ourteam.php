@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<?php
+session_start();
+
+$isLoggedIn = isset($_SESSION['user_id']);
+$isAdmin = isset($_SESSION['role']) && $_SESSION['role'] === 'admin';
+?>
+>>>>>>> c74e38f (ferjaoui_amine)
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -42,7 +51,11 @@
   <body>
     <!-- Navbar -->
     <nav>
+<<<<<<< HEAD
       <a href="index.html" class="brand">
+=======
+      <a href="index.php" class="brand">
+>>>>>>> c74e38f (ferjaoui_amine)
         <h1>LALA<b class="accent">PA</b></h1>
       </a>
       <div class="menu">
@@ -54,17 +67,44 @@
         <a href="ourteam.php">Our Team</a>
         <a href="pets.php">Pets</a>
         <a href="service.php">Service</a>
+<<<<<<< HEAD
       </div>
 
       <button class="btn-2" onclick="window.location.href='contact.php'">
         <p>Contact Us</p>
         <i class="fa-solid fa-circle-arrow-right"></i>
       </button>
+=======
+        <a href="annonces.php">Annonces</a>
+        <a href="contact.php">Contact</a>
+        <?php if($isAdmin): ?>
+          <a href="admin/index.php">Admin</a>
+        <?php endif; ?>
+        <?php if($isLoggedIn): ?>
+          <a href="user/index.php">Mon espace</a>
+        <?php endif; ?>
+      </div>
+
+      <?php if(!$isLoggedIn): ?>
+        <button class="btn-2" onclick="window.location.href='register.php'">
+          <p>Register</p>
+          <i class="fa-solid fa-circle-arrow-right"></i>
+        </button>
+        <button class="btn-3" onclick="window.location.href='Login.php'">
+          <p>login</p>
+        </button>
+      <?php else: ?>
+        <button class="btn-3" onclick="window.location.href='logout.php'">
+          <p>Logout</p>
+        </button>
+      <?php endif; ?>
+>>>>>>> c74e38f (ferjaoui_amine)
 
       <div class="btn">
         <i class="fas fa-bars menu-btn"></i>
       </div>
     </nav>
+<<<<<<< HEAD
     <section class="team">
     <div class="container">
         <h2 class="team-title">Meet Our Team</h2>
@@ -102,6 +142,81 @@
 <h3>Want to help animals with us?</h3>
 <a href="register.php" class="join-btn">Become a Volunteer</a>
 </div>
+=======
+    <!-- Hero Section -->
+    <section style="padding: 80px 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <h1 style="font-size: 48px; margin-bottom: 20px;">Notre Équipe</h1>
+        <p style="font-size: 20px; line-height: 1.6;">
+          Rencontrez les personnes passionnées qui se dévouent chaque jour pour le bien-être de nos animaux.
+        </p>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section style="padding: 60px 30px; max-width: 1200px; margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+        
+        <div style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; text-align: center; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+          <img src="img/Sarah Ben Ali.jpg" alt="Malek" style="width: 100%; height: 280px; object-fit: cover;">
+          <div style="padding: 25px;">
+            <h3 style="font-size: 24px; color: #2d3748; margin-bottom: 8px;">Malek Mili</h3>
+            <p style="color: #667eea; font-weight: 600; margin-bottom: 15px;"><i class="fas fa-stethoscope"></i> Vétérinaire</p>
+            <p style="color: #718096; line-height: 1.6; font-size: 14px;">
+              Expert en soins vétérinaires avec 10 ans d'expérience dans le sauvetage d'animaux.
+            </p>
+          </div>
+        </div>
+
+        <div style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; text-align: center; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+          <img src="img/Ahmed Trabelsi.jpg" alt="Houssem" style="width: 100%; height: 280px; object-fit: cover;">
+          <div style="padding: 25px;">
+            <h3 style="font-size: 24px; color: #2d3748; margin-bottom: 8px;">Houssem Kteta</h3>
+            <p style="color: #43e97b; font-weight: 600; margin-bottom: 15px;"><i class="fas fa-heart"></i> Spécialiste Soins Animaux</p>
+            <p style="color: #718096; line-height: 1.6; font-size: 14px;">
+              Passionné par le bien-être animal, il assure les soins quotidiens de nos protégés.
+            </p>
+          </div>
+        </div>
+
+        <div style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; text-align: center; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+          <img src="img/Leila Mansour.jpg" alt="Souha" style="width: 100%; height: 280px; object-fit: cover;">
+          <div style="padding: 25px;">
+            <h3 style="font-size: 24px; color: #2d3748; margin-bottom: 8px;">Souha Othmen</h3>
+            <p style="color: #fa709a; font-weight: 600; margin-bottom: 15px;"><i class="fas fa-users"></i> Coordinatrice Adoptions</p>
+            <p style="color: #718096; line-height: 1.6; font-size: 14px;">
+              Elle accompagne les familles dans leur projet d'adoption pour garantir le meilleur match.
+            </p>
+          </div>
+        </div>
+
+        <div style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; text-align: center; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+          <img src="img/Youssef Gharbi.jpg" alt="Oussema" style="width: 100%; height: 280px; object-fit: cover;">
+          <div style="padding: 25px;">
+            <h3 style="font-size: 24px; color: #2d3748; margin-bottom: 8px;">Oussema Ben Abdallah</h3>
+            <p style="color: #4facfe; font-weight: 600; margin-bottom: 15px;"><i class="fas fa-hands-helping"></i> Responsable Bénévoles</p>
+            <p style="color: #718096; line-height: 1.6; font-size: 14px;">
+              Il coordonne notre équipe de bénévoles dévoués qui font vivre notre mission.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="padding: 80px 30px; background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); text-align: center;">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <h2 style="font-size: 36px; color: white; margin-bottom: 20px;">Vous voulez aider les animaux avec nous ?</h2>
+        <p style="font-size: 18px; color: white; margin-bottom: 30px; opacity: 0.9;">
+          Rejoignez notre équipe de bénévoles et faites la différence dans la vie des animaux abandonnés.
+        </p>
+        <a href="register.php" style="background: white; color: #43e97b; padding: 15px 40px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+          <i class="fas fa-user-plus"></i> Devenir Bénévole
+        </a>
+      </div>
+    </section>
+>>>>>>> c74e38f (ferjaoui_amine)
      <footer id="footer">
       <div class="footer-container">
         <div class="footer-links">

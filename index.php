@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<?php
+session_start();
+
+$isLoggedIn = isset($_SESSION['user_id']);
+$isAdmin = isset($_SESSION['role']) && $_SESSION['role'] === 'admin';
+?>
+>>>>>>> c74e38f (ferjaoui_amine)
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -36,7 +45,11 @@
   <body>
     <!-- Navbar -->
     <nav>
+<<<<<<< HEAD
       <a href="index.html" class="brand">
+=======
+      <a href="index.php" class="brand">
+>>>>>>> c74e38f (ferjaoui_amine)
         <h1>LALA<b class="accent">PA</b></h1>
       </a>
       <div class="menu">
@@ -48,6 +61,7 @@
         <a href="ourteam.php">Our Team</a>
         <a href="pets.php">Pets</a>
         <a href="service.php">Service</a>
+<<<<<<< HEAD
       </div>
 
       <button class="btn-2" onclick="window.location.href='register.php'">
@@ -59,6 +73,33 @@
         <p>login</p>
 
       </button>
+=======
+        <a href="annonces.php">Annonces</a>
+        <a href="contact.php">Contact</a>
+        <?php if($isAdmin): ?>
+          <a href="admin/index.php">Admin</a>
+        <?php endif; ?>
+        <?php if($isLoggedIn): ?>
+          <a href="user/index.php">Mon espace</a>
+        <?php endif; ?>
+      </div>
+
+      <?php if(!$isLoggedIn): ?>
+        <button class="btn-2" onclick="window.location.href='register.php'">
+          <p>Register</p>
+          <i class="fa-solid fa-circle-arrow-right"></i>
+        </button> 
+
+        <button class="btn-3" onclick="window.location.href='Login.php'">
+          <p>login</p>
+
+        </button>
+      <?php else: ?>
+        <button class="btn-3" onclick="window.location.href='logout.php'">
+          <p>Logout</p>
+        </button>
+      <?php endif; ?>
+>>>>>>> c74e38f (ferjaoui_amine)
 
       <div class="btn">
         <i class="fas fa-bars menu-btn"></i>
@@ -251,6 +292,7 @@
           <div class="link-container">
             <div class="links">
               <a href="/">Home</a>
+<<<<<<< HEAD
               <a href="index.html#about">About</a>
               <a href="index.html#pets">Pets</a>
             </div>
@@ -258,6 +300,15 @@
               <a href="/">Requirements</a>
               <a href="index.html#stories">Stories</a>
               <a href="index.html#footer">Contact Us</a>
+=======
+              <a href="index.php#about">About</a>
+              <a href="index.php#pets">Pets</a>
+            </div>
+            <div class="links">
+              <a href="/">Requirements</a>
+              <a href="index.php#stories">Stories</a>
+              <a href="index.php#footer">Contact Us</a>
+>>>>>>> c74e38f (ferjaoui_amine)
             </div>
           </div>
         </div>

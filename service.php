@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+<?php
+session_start();
+
+$isLoggedIn = isset($_SESSION['user_id']);
+$isAdmin = isset($_SESSION['role']) && $_SESSION['role'] === 'admin';
+?>
+>>>>>>> c74e38f (ferjaoui_amine)
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -42,7 +51,11 @@
   <body>
     <!-- Navbar -->
     <nav>
+<<<<<<< HEAD
       <a href="index.html" class="brand">
+=======
+      <a href="index.php" class="brand">
+>>>>>>> c74e38f (ferjaoui_amine)
         <h1>LALA<b class="accent">PA</b></h1>
       </a>
       <div class="menu">
@@ -51,6 +64,7 @@
         </div>
         <a href="index.php">Home</a>
         <a href="about.php">About</a>
+<<<<<<< HEAD
         <a href="ourtram.php">Our Team</a>
         <a href="pets.php">Pets</a>
         <a href="service.php">Service</a>
@@ -60,11 +74,40 @@
         <p>Contact Us</p>
         <i class="fa-solid fa-circle-arrow-right"></i>
       </button>
+=======
+        <a href="ourteam.php">Our Team</a>
+        <a href="pets.php">Pets</a>
+        <a href="service.php">Service</a>
+        <a href="contact.php">Contact</a>
+        <a href="annonces.php">Annonces</a>
+        <?php if($isAdmin): ?>
+          <a href="admin/index.php">Admin</a>
+        <?php endif; ?>
+        <?php if($isLoggedIn): ?>
+          <a href="user/index.php">Mon espace</a>
+        <?php endif; ?>
+      </div>
+
+      <?php if(!$isLoggedIn): ?>
+        <button class="btn-2" onclick="window.location.href='register.php'">
+          <p>Register</p>
+          <i class="fa-solid fa-circle-arrow-right"></i>
+        </button>
+        <button class="btn-3" onclick="window.location.href='Login.php'">
+          <p>login</p>
+        </button>
+      <?php else: ?>
+        <button class="btn-3" onclick="window.location.href='logout.php'">
+          <p>Logout</p>
+        </button>
+      <?php endif; ?>
+>>>>>>> c74e38f (ferjaoui_amine)
 
       <div class="btn">
         <i class="fas fa-bars menu-btn"></i>
       </div>
     </nav>
+<<<<<<< HEAD
     <section class="stories-section">
 
 <h1>Happy Adoption Stories 🐾</h1>
@@ -106,6 +149,76 @@
 </div>
 
 </section>
+=======
+    <!-- Hero Section -->
+    <section style="padding: 80px 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <h1 style="font-size: 48px; margin-bottom: 20px;">Histoires d'Adoption 🐾</h1>
+        <p style="font-size: 20px; line-height: 1.6;">
+          Découvrez les histoires touchantes de nos animaux qui ont trouvé leur famille pour toujours.
+        </p>
+      </div>
+    </section>
+
+    <!-- Stories Section -->
+    <section style="padding: 60px 30px; max-width: 1200px; margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+        
+        <div style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+          <img src="img/dogsauve.jpg" style="width: 100%; height: 250px; object-fit: cover;">
+          <div style="padding: 25px;">
+            <h3 style="font-size: 24px; color: #2d3748; margin-bottom: 15px;">🐕 Bella - Une Nouvelle Vie</h3>
+            <p style="color: #718096; line-height: 1.6; margin-bottom: 15px;">
+              Bella était abandonnée dans la rue, affamée et effrayée. Aujourd'hui, elle vit heureuse avec sa nouvelle famille qui l'adore.
+            </p>
+            <span style="color: #667eea; font-weight: 600; font-size: 14px;">
+              <i class="fas fa-heart"></i> Adoptée en Mars 2024
+            </span>
+          </div>
+        </div>
+
+        <div style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+          <img src="img/catsauve.jpg" style="width: 100%; height: 250px; object-fit: cover;">
+          <div style="padding: 25px;">
+            <h3 style="font-size: 24px; color: #2d3748; margin-bottom: 15px;">🐱 Max - Un Foyer Aimant</h3>
+            <p style="color: #718096; line-height: 1.6; margin-bottom: 15px;">
+              Max a été sauvé par une association et adopté après seulement deux semaines. Il est maintenant le roi de sa nouvelle maison!
+            </p>
+            <span style="color: #667eea; font-weight: 600; font-size: 14px;">
+              <i class="fas fa-heart"></i> Adopté en Février 2024
+            </span>
+          </div>
+        </div>
+
+        <div style="background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+          <img src="img/dogsauve2.jpg" style="width: 100%; height: 250px; object-fit: cover;">
+          <div style="padding: 25px;">
+            <h3 style="font-size: 24px; color: #2d3748; margin-bottom: 15px;">🐕 Luna - Le Voyage de l'Espoir</h3>
+            <p style="color: #718096; line-height: 1.6; margin-bottom: 15px;">
+              Luna a retrouvé confiance grâce à sa nouvelle famille patiente et aimante. Elle est maintenant une chienne joyeuse et épanouie.
+            </p>
+            <span style="color: #667eea; font-weight: 600; font-size: 14px;">
+              <i class="fas fa-heart"></i> Adoptée en Janvier 2024
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="padding: 80px 30px; background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); text-align: center; margin-top: 60px;">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <h2 style="font-size: 36px; color: white; margin-bottom: 20px;">Votre Histoire Commence Ici</h2>
+        <p style="font-size: 18px; color: white; margin-bottom: 30px; opacity: 0.9;">
+          Rejoignez des centaines de familles heureuses qui ont adopté leur compagnon parfait.
+        </p>
+        <a href="pets.php" style="background: white; color: #43e97b; padding: 15px 40px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+          <i class="fas fa-paw"></i> Trouver Votre Compagnon
+        </a>
+      </div>
+    </section>
+>>>>>>> c74e38f (ferjaoui_amine)
      <footer id="footer">
       <div class="footer-container">
         <div class="footer-links">
