@@ -14,16 +14,9 @@ $tmp = $_FILES['image']['tmp_name'];
 
 move_uploaded_file($tmp,"images/".$image);
 
-<<<<<<< HEAD
-$sql = "INSERT INTO animaux(nom,age,type,race,description,image)
-        VALUES('$nom','$age','$type','$race','$description','$image')";
-
-mysqli_query($conn,$sql);
-=======
 $stmt = mysqli_prepare($conn, "INSERT INTO animaux(nom,age,type,race,description,image) VALUES(?,?,?,?,?,?)");
 mysqli_stmt_bind_param($stmt, "sissss", $nom, $age, $type, $race, $description, $image);
 mysqli_stmt_execute($stmt);
->>>>>>> c74e38f (ferjaoui_amine)
 
 echo "Animal ajouté";
 }

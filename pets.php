@@ -1,13 +1,9 @@
 <?php
-<<<<<<< HEAD
-include("config.php");
-=======
 session_start();
 include("config.php");
 
 $isLoggedIn = isset($_SESSION['user_id']);
 $isAdmin = isset($_SESSION['role']) && $_SESSION['role'] === 'admin';
->>>>>>> c74e38f (ferjaoui_amine)
 ?>
 
 <!DOCTYPE html>
@@ -51,14 +47,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <a href="ourteam.php">Our Team</a>
 <a href="pets.php">Pets</a>
 <a href="service.php">Service</a>
-<<<<<<< HEAD
-</div>
-
-<button class="btn-2" onclick="window.location.href='contact.php'">
-<p>Contact Us</p>
-<i class="fa-solid fa-circle-arrow-right"></i>
-</button>
-=======
 <a href="annonces.php">Annonces</a>
 <a href="contact.php">Contact</a>
 <?php if($isAdmin): ?>
@@ -82,21 +70,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     <p>Logout</p>
   </button>
 <?php endif; ?>
->>>>>>> c74e38f (ferjaoui_amine)
 
 <div class="btn">
 <i class="fas fa-bars menu-btn"></i>
 </div>
 </nav>
 
-<<<<<<< HEAD
-<!-- Section Pets -->
-<section class="pets">
-
-<h2>Pets Available for Adoption</h2>
-
-<div class="pets-container">
-=======
 <!-- Hero Section -->
 <section style="padding: 80px 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
   <div style="max-width: 800px; margin: 0 auto;">
@@ -134,7 +113,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <!-- Pets Section -->
 <section style="padding: 40px 30px 60px; max-width: 1200px; margin: 0 auto;">
   <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px;" class="pets-container">
->>>>>>> c74e38f (ferjaoui_amine)
 
 <?php
 
@@ -145,27 +123,6 @@ while($row = mysqli_fetch_assoc($result)){
 
 ?>
 
-<<<<<<< HEAD
-<div class="pet-card">
-
-<img src="img/<?php echo $row['image']; ?>" alt="Animal">
-
-<h3><?php echo $row['name']; ?></h3>
-
-<p>Age : <?php echo $row['age']; ?> years</p>
-
-<p><?php echo $row['description']; ?></p>
-
-<!-- bouton adoption -->
-<a href="adoption.php?id=<?php echo $row['id']; ?>">
-<button>Adopt Me</button>
-</a>
-
-<!-- bouton favoris -->
-<a href="favoris.php?id=<?php echo $row['id']; ?>">
-<button>Add to Favorites</button>
-</a>
-=======
 <div class="pet-card" 
      data-name="<?php echo strtolower(htmlspecialchars($row['nom'] ?? '')); ?>" 
      data-type="<?php echo strtolower(htmlspecialchars($row['type'] ?? '')); ?>"
@@ -202,133 +159,13 @@ while($row = mysqli_fetch_assoc($result)){
       </a>
     </div>
   </div>
->>>>>>> c74e38f (ferjaoui_amine)
 
 </div>
 
 <?php } ?>
 
-<<<<<<< HEAD
-</div>
-</section>
-<?php
-include("config.php");
-
-$sql = "SELECT * FROM animals";
-$result = $conn->query($sql);
-?>
-
-<!DOCTYPE html>
-<html>
-<head>
-<title>Pets</title>
-
-<style>
-
-body{
-    font-family: Arial;
-    background:#f7f7f7;
-}
-
-.container{
-    width:90%;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.card{
-    background:white;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-}
-
-.card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-}
-
-.card-content{
-    padding:15px;
-}
-
-.card-content h3{
-    margin:0;
-}
-
-.info{
-    display:flex;
-    justify-content:space-between;
-    color:gray;
-    font-size:14px;
-}
-
-.btn{
-    background:#ff8c8c;
-    color:white;
-    padding:8px 18px;
-    border:none;
-    border-radius:20px;
-    cursor:pointer;
-    margin-top:10px;
-}
-
-.btn:hover{
-    background:#ff6b6b;
-}
-
-</style>
-</head>
-
-<body>
-
-<h2 style="text-align:center">Available Pets </h2>
-
-<div class="container">
-
-<?php
-if($result->num_rows > 0){
-    while($row = $result->fetch_assoc()){
-?>
-
-<div class="card">
-    <img src="images/<?php echo $row['image']; ?>">
-
-    <div class="card-content">
-        <h3><?php echo $row['name']; ?></h3>
-
-        <div class="info">
-            <span><?php echo $row['age']; ?></span>
-            <span><?php echo $row['gender']; ?></span>
-        </div>
-
-        <button class="btn">Adopt →</button>
-    </div>
-</div>
-
-<?php
-    }
-}
-?>
-
-</div>
-
-</body>
-</html>
-
-
-=======
   </div>
 </section>
->>>>>>> c74e38f (ferjaoui_amine)
 <!-- Footer -->
 <footer id="footer">
 <div class="footer-container">
@@ -383,9 +220,6 @@ All Rights Reserved to <b>Purrfect Org 2024</b>
 
 </footer>
 
-<<<<<<< HEAD
-=======
 <script src="search_pets.js"></script>
->>>>>>> c74e38f (ferjaoui_amine)
 </body>
 </html>

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <?php
 session_start();
 
@@ -31,7 +29,6 @@ if(isset($_POST['send'])){
   }
 }
 ?>
->>>>>>> c74e38f (ferjaoui_amine)
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -76,11 +73,7 @@ if(isset($_POST['send'])){
   <body>
     <!-- Navbar -->
     <nav>
-<<<<<<< HEAD
-      <a href="index.html" class="brand">
-=======
       <a href="index.php" class="brand">
->>>>>>> c74e38f (ferjaoui_amine)
         <h1>LALA<b class="accent">PA</b></h1>
       </a>
       <div class="menu">
@@ -88,18 +81,6 @@ if(isset($_POST['send'])){
           <i class="fas fa-times close-btn"></i>
         </div>
         <a href="index.php">Home</a>
-<<<<<<< HEAD
-        <a href="pets.html">Pets</a>
-        <a href="association.html">association</a>
-        <a href="about.html">About</a>
-        <a href="stories.html">Stories</a>
-      </div>
-
-      <button class="btn-2" onclick="window.location.href='contact.php'">
-        <p>Contact Us</p>
-        <i class="fa-solid fa-circle-arrow-right"></i>
-      </button>
-=======
         <a href="about.php">About</a>
         <a href="ourteam.php">Our Team</a>
         <a href="pets.php">Pets</a>
@@ -127,14 +108,11 @@ if(isset($_POST['send'])){
           <p>Logout</p>
         </button>
       <?php endif; ?>
->>>>>>> c74e38f (ferjaoui_amine)
 
       <div class="btn">
         <i class="fas fa-bars menu-btn"></i>
       </div>
     </nav>
-<<<<<<< HEAD
-=======
 
     <!-- Hero Section -->
     <section style="padding: 80px 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
@@ -238,8 +216,7 @@ if(isset($_POST['send'])){
       </div>
     </section>
 
->>>>>>> c74e38f (ferjaoui_amine)
-     <footer id="footer">
+    <footer id="footer">
       <div class="footer-container">
         <div class="footer-links">
           <h2>Quick Links</h2>

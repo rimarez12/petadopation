@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-=======
 <?php
 session_start();
 
 $isLoggedIn = isset($_SESSION['user_id']);
 $isAdmin = isset($_SESSION['role']) && $_SESSION['role'] === 'admin';
 ?>
->>>>>>> c74e38f (ferjaoui_amine)
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -51,11 +48,7 @@ $isAdmin = isset($_SESSION['role']) && $_SESSION['role'] === 'admin';
   <body>
     <!-- Navbar -->
     <nav>
-<<<<<<< HEAD
-      <a href="index.html" class="brand">
-=======
       <a href="index.php" class="brand">
->>>>>>> c74e38f (ferjaoui_amine)
         <h1>LALA<b class="accent">PA</b></h1>
       </a>
       <div class="menu">
@@ -65,16 +58,6 @@ $isAdmin = isset($_SESSION['role']) && $_SESSION['role'] === 'admin';
         <a href="index.php">Home</a>
         <a href="about.php">About</a>
         <a href="ourteam.php">Our Team</a>
-<<<<<<< HEAD
-        <a href="about.html">About</a>
-        <a href="service.php">Service</a>
-      </div>
-
-      <button class="btn-2" onclick="window.location.href='contact.html'">
-        <p>Contact Us</p>
-        <i class="fa-solid fa-circle-arrow-right"></i>
-      </button>
-=======
         <a href="service.php">Service</a>
         <a href="pets.php">Pets</a>
         <a href="annonces.php">Annonces</a>
@@ -100,144 +83,12 @@ $isAdmin = isset($_SESSION['role']) && $_SESSION['role'] === 'admin';
           <p>Logout</p>
         </button>
       <?php endif; ?>
->>>>>>> c74e38f (ferjaoui_amine)
 
       <div class="btn">
         <i class="fas fa-bars menu-btn"></i>
       </div>
     </nav>
-<<<<<<< HEAD
-    <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>About - Purrfect</title>
-    <link rel="stylesheet" href="about.css">
-</head>
-<body>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>About Us</title>
-<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<!-- ABOUT -->
-<section class="about">
-    <div class="container">
-        
-        <div class="about-text">
-            <h1>About Us</h1>
-            <p>
-            We are a multi-award-winning digital consulting and engineering firm 
-            that provides end-to-end software solutions to enterprises.
-            </p>
-
-            <button>Contact</button>
-        </div>
-
-        <div class="about-img">
-            <img src="img/aboutprin.jpg">
-        </div>
-
-    </div>
-</section>
-
-
-<!-- WHO ARE WE -->
-<section class="who">
-
-<div class="container">
-
-<div class="who-img">
-<img src="images/web.png">
-</div>
-
-<div class="who-text">
-
-<h2>Who Are We?</h2>
-
-<p>
-We are highly passionate about Web and Mobile application Development Services.
-</p>
-
-<ul>
-<li>App design and development</li>
-<li>Web development solutions</li>
-<li>Cloud and digital marketing</li>
-<li>Modern scalable technologies</li>
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- SERVICES -->
-<section class="services">
-
-<h2>How We Aid in Brand Development</h2>
-
-<div class="service-box">
-
-<div class="card">
-<img src="images/icon1.png">
-<h3>Client Centric Approach</h3>
-<p>Customers always stay at the center of our strategy.</p>
-</div>
-
-<div class="card">
-<img src="images/icon2.png">
-<h3>Effective Collaboration</h3>
-<p>Strong teamwork helps build better digital products.</p>
-</div>
-
-<div class="card">
-<img src="images/icon3.png">
-<h3>On-Time Delivery</h3>
-<p>We deliver projects efficiently and on time.</p>
-</div>
-
-<div class="card">
-<img src="images/icon1.png">
-<h3>Client Centric Approach</h3>
-<p>Customers always stay at the center of our strategy.</p>
-</div>
-
-<div class="card">
-<img src="images/icon2.png">
-<h3>Effective Collaboration</h3>
-<p>Strong teamwork helps build better digital products.</p>
-</div>
-
-<div class="card">
-<img src="images/icon3.png">
-<h3>On-Time Delivery</h3>
-<p>We deliver projects efficiently and on time.</p>
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- STATISTICS -->
-<section class="stats">
-
-<h2>We Provide with</h2>
-
-<div class="stat-container">
-
-<div class="stat">
-=======
     <!-- About Section -->
     <section style="padding: 80px 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
       <div style="max-width: 800px; margin: 0 auto;">
@@ -302,69 +153,36 @@ We are highly passionate about Web and Mobile application Development Services.
               <i class="fas fa-handshake" style="font-size: 28px; color: white;"></i>
             </div>
             <h3 style="font-size: 22px; color: #2d3748; margin-bottom: 15px;">Transparence</h3>
+            <p style="color: #718096; line-height: 1.6;">Honnêteté et clarté dans toutes nos actions</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- STATISTICS -->
     <section class="stats">
-
       <h2>We Provide with</h2>
-
       <div class="stat-container">
-
         <div class="stat">
           <h3>150+</h3>
           <p>Professionals Team</p>
         </div>
-
         <div class="stat">
           <h3>10+</h3>
           <p>Years of Experience</p>
         </div>
-
         <div class="stat">
           <h3>120K</h3>
           <p>Projects Delivered</p>
         </div>
-
         <div class="stat">
           <h3>50K</h3>
           <p>Happy Client</p>
         </div>
-
       </div>
-
     </section>
->>>>>>> c74e38f (ferjaoui_amine)
-<h3>150+</h3>
-<p>Professionals Team</p>
-</div>
 
-<div class="stat">
-<h3>10+</h3>
-<p>Years of Experience</p>
-</div>
-
-<div class="stat">
-<h3>120K</h3>
-<p>Projects Delivered</p>
-</div>
-
-<div class="stat">
-<h3>50K</h3>
-<p>Happy Client</p>
-</div>
-
-</div>
-
-</section>
-
-</body>
-</html>
-</body>
-</html>
-     <footer id="footer">
+    <footer id="footer">
       <div class="footer-container">
         <div class="footer-links">
           <h2>Quick Links</h2>

@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-=======
 <?php
 session_start();
 
 $isLoggedIn = isset($_SESSION['user_id']);
 $isAdmin = isset($_SESSION['role']) && $_SESSION['role'] === 'admin';
 ?>
->>>>>>> c74e38f (ferjaoui_amine)
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -51,11 +48,7 @@ $isAdmin = isset($_SESSION['role']) && $_SESSION['role'] === 'admin';
   <body>
     <!-- Navbar -->
     <nav>
-<<<<<<< HEAD
-      <a href="index.html" class="brand">
-=======
       <a href="index.php" class="brand">
->>>>>>> c74e38f (ferjaoui_amine)
         <h1>LALA<b class="accent">PA</b></h1>
       </a>
       <div class="menu">
@@ -64,17 +57,6 @@ $isAdmin = isset($_SESSION['role']) && $_SESSION['role'] === 'admin';
         </div>
         <a href="index.php">Home</a>
         <a href="about.php">About</a>
-<<<<<<< HEAD
-        <a href="ourtram.php">Our Team</a>
-        <a href="pets.php">Pets</a>
-        <a href="service.php">Service</a>
-      </div>
-
-      <button class="btn-2" onclick="window.location.href='contact.html'">
-        <p>Contact Us</p>
-        <i class="fa-solid fa-circle-arrow-right"></i>
-      </button>
-=======
         <a href="ourteam.php">Our Team</a>
         <a href="pets.php">Pets</a>
         <a href="service.php">Service</a>
@@ -101,55 +83,11 @@ $isAdmin = isset($_SESSION['role']) && $_SESSION['role'] === 'admin';
           <p>Logout</p>
         </button>
       <?php endif; ?>
->>>>>>> c74e38f (ferjaoui_amine)
 
       <div class="btn">
         <i class="fas fa-bars menu-btn"></i>
       </div>
     </nav>
-<<<<<<< HEAD
-    <section class="stories-section">
-
-<h1>Happy Adoption Stories 🐾</h1>
-
-<div class="stories-container">
-
-    <div class="story-card">
-        <img src="img/dogsauve.jpg">
-        <div class="story-content">
-            <h3>Bella's New Life</h3>
-            <p>
-            Bella était abandonnée dans la rue. Aujourd’hui elle vit
-            heureuse avec sa nouvelle famille.
-            </p>
-        </div>
-    </div>
-
-    <div class="story-card">
-        <img src="img/catsauve.jpg">
-        <div class="story-content">
-            <h3>Max Found a Home</h3>
-            <p>
-            Max a été sauvé par une association et adopté après
-            seulement deux semaines.
-            </p>
-        </div>
-    </div>
-
-    <div class="story-card">
-        <img src="img/dogsauve2.jpg">
-        <div class="story-content">
-            <h3>Luna's Journey</h3>
-            <p>
-            Luna a retrouvé confiance grâce à sa nouvelle famille.
-            </p>
-        </div>
-    </div>
-
-</div>
-
-</section>
-=======
     <!-- Hero Section -->
     <section style="padding: 80px 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
       <div style="max-width: 800px; margin: 0 auto;">
@@ -218,8 +156,7 @@ $isAdmin = isset($_SESSION['role']) && $_SESSION['role'] === 'admin';
         </a>
       </div>
     </section>
->>>>>>> c74e38f (ferjaoui_amine)
-     <footer id="footer">
+    <footer id="footer">
       <div class="footer-container">
         <div class="footer-links">
           <h2>Quick Links</h2>

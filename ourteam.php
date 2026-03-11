@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-=======
 <?php
 session_start();
 
 $isLoggedIn = isset($_SESSION['user_id']);
 $isAdmin = isset($_SESSION['role']) && $_SESSION['role'] === 'admin';
 ?>
->>>>>>> c74e38f (ferjaoui_amine)
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -51,11 +48,7 @@ $isAdmin = isset($_SESSION['role']) && $_SESSION['role'] === 'admin';
   <body>
     <!-- Navbar -->
     <nav>
-<<<<<<< HEAD
-      <a href="index.html" class="brand">
-=======
       <a href="index.php" class="brand">
->>>>>>> c74e38f (ferjaoui_amine)
         <h1>LALA<b class="accent">PA</b></h1>
       </a>
       <div class="menu">
@@ -67,14 +60,6 @@ $isAdmin = isset($_SESSION['role']) && $_SESSION['role'] === 'admin';
         <a href="ourteam.php">Our Team</a>
         <a href="pets.php">Pets</a>
         <a href="service.php">Service</a>
-<<<<<<< HEAD
-      </div>
-
-      <button class="btn-2" onclick="window.location.href='contact.php'">
-        <p>Contact Us</p>
-        <i class="fa-solid fa-circle-arrow-right"></i>
-      </button>
-=======
         <a href="annonces.php">Annonces</a>
         <a href="contact.php">Contact</a>
         <?php if($isAdmin): ?>
@@ -98,51 +83,11 @@ $isAdmin = isset($_SESSION['role']) && $_SESSION['role'] === 'admin';
           <p>Logout</p>
         </button>
       <?php endif; ?>
->>>>>>> c74e38f (ferjaoui_amine)
 
       <div class="btn">
         <i class="fas fa-bars menu-btn"></i>
       </div>
     </nav>
-<<<<<<< HEAD
-    <section class="team">
-    <div class="container">
-        <h2 class="team-title">Meet Our Team</h2>
-
-        <div class="team-container">
-
-            <div class="team-card">
-                <img src="img/Sarah Ben Ali.jpg" alt="">
-                <h3>Malek mili</h3>
-                <p>Veterinarian</p>
-            </div>
-
-            <div class="team-card">
-                <img src="img/Ahmed Trabelsi.jpg" alt="">
-                <h3>Houssem kteta</h3>
-                <p>Animal Care Specialist</p>
-            </div>
-
-            <div class="team-card">
-                <img src="img/Leila Mansour.jpg" alt="">
-                <h3>Souha othmen</h3>
-                <p>Adoption Coordinator</p>
-            </div>
-
-            <div class="team-card">
-                <img src="img/Youssef Gharbi.jpg" alt="">
-                <h3>Oussema ben abdallah</h3>
-                <p>Volunteer Manager</p>
-            </div>
-
-        </div>
-    </div>
-</section>
-<div class="join-team">
-<h3>Want to help animals with us?</h3>
-<a href="register.php" class="join-btn">Become a Volunteer</a>
-</div>
-=======
     <!-- Hero Section -->
     <section style="padding: 80px 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
       <div style="max-width: 800px; margin: 0 auto;">
@@ -216,8 +161,8 @@ $isAdmin = isset($_SESSION['role']) && $_SESSION['role'] === 'admin';
         </a>
       </div>
     </section>
->>>>>>> c74e38f (ferjaoui_amine)
-     <footer id="footer">
+
+    <footer id="footer">
       <div class="footer-container">
         <div class="footer-links">
           <h2>Quick Links</h2>

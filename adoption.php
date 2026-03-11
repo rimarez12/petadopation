@@ -2,14 +2,6 @@
 session_start();
 include("config.php");
 
-<<<<<<< HEAD
-$user_id = $_SESSION['user_id'];
-$animal_id = $_GET['id'];
-
-mysqli_query($conn,
-"INSERT INTO demandes_adoption(user_id,animal_id)
-VALUES('$user_id','$animal_id')");
-=======
 if(!isset($_SESSION['user_id'])){
     header("Location: Login.php");
     exit;
@@ -39,5 +31,4 @@ mysqli_stmt_execute($stmt);
 
 header("Location: pets.php?success=request_sent");
 exit;
->>>>>>> c74e38f (ferjaoui_amine)
 ?>
